@@ -12,6 +12,15 @@ fetch('https://jsonplaceholder.typicode.com/posts')
             temp +="<td>"+u.title+"</td>";
             temp +="<td>"+u.body+"</td></tr>";
  });
+       window.open("id");
    document.getElementById("data").innerHTML= temp;   
-    }
+    } 
 })
+
+const form = document.querySelector('form');
+const thankYouMessage = document.querySelector('#thank-you-message');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  thankYouMessage.classList.add('show');
+  setTimeout(() => form.submit(), 2000);
+});
