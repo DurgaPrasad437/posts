@@ -42,12 +42,16 @@ fetch('https://jsonplaceholder.typicode.com/posts',{
   method:'POST',
   body: JSON.stringify(
     {
-      "userId": document.getElementById("userid").value,
-      "id": document.getElementById("id").value,
-      "title": document.getElementById("title").value
+      "userId": document.getElementById("man"),
+      "id": document.getElementById("van"),
+      "title": document.getElementById("can"),
+      "body": document.getElementById("ran")
     }
   ),
 })
+//var newWindow = window.open("posts.html","_blank");
+//newWindow.alert('Created successfully')
+
 .then(res => res.json())
 .then(data => console.log(data));
 }
